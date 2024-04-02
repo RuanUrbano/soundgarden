@@ -16,4 +16,15 @@ card.innerHTML = cardHTML;
 const rodape = document.getElementById('rodape');
 console.log(card);
 document.getElementById('main').insertBefore(card, rodape);
+const reservarIngressos = document.querySelectorAll(".reservar-ingresso")
+reservarIngressos.forEach(
+    (ingresso)=>{
+        ingresso.addEventListener('click', ()=>{
+            const datasrc= ingresso.getAttribute('data-src')
+            const mainPost = document.getElementById('mainPost')
+            const poster = `<img src='${datasrc}'></img> `
+            mainPost.innerHTML = poster;
+        })
+    }
+)
 
