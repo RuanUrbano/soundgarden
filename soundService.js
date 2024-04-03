@@ -13,19 +13,12 @@ async function carregarInformacoes() {
               <h2 id="nome-evento">${valorDoJson[i].name}</h2>
               <h4 id="nome-banda">${valorDoJson[i].attractions.join(', ')}</h4>
               <p id="descricao">${valorDoJson[i].description}</p>
+              <p id="ticket">Ingressos disponíveis: ${valorDoJson[i].number_tickets}</p>
               <a href="#" id="botao1" data-src="${valorDoJson[i].poster}" class="btn btn-primary reservar-ingresso">reservar ingresso</a>
           </article>
         `;
         dadosDaEstrutura.push(estrutura);
       }
-      //const divImagem = document.getElementById('POSTER');
-
-      // const tagImagem = document.createElement('img');
-      // tagImagem.scr= valorDoJson[0].poster;
-      // console.log(valorDoJson[0].poster)
-      // document.body.appendChild(tagImagem)
-      // const img = document.querySelector("img");
-
       const dadosDaEstruturaString = dadosDaEstrutura.join('\n');
       
       const estruturaTotal = `
