@@ -1,6 +1,5 @@
 import { carregarInformacoes } from "./soundService.js";
-
-const teste = await carregarInformacoes();
+const teste = await carregarInformacoes(3);
 
 const cardHTML = `<section class="full">
 <div class="container text-center">
@@ -25,7 +24,7 @@ reservarIngressos.forEach(
         ingresso.addEventListener('click', ()=>{
             const datasrc= ingresso.getAttribute('data-src')
             const mainPost = document.getElementById('mainPost')
-            const poster = `<img src='${datasrc}'></img> `
+            const poster = `<a href="https://minhaentrada.com.br/"><img  src='${datasrc}'></img></a> `
             mainPost.innerHTML = poster;
         })
     }
